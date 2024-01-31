@@ -10,11 +10,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Person extends Model
 {
-    protected $table = 'persons';
+    protected $table = 'people';
 
-    protected $fillable = ['other_id', 'tax_number', 'full_name', 'email', 'login_at', 'logout_at'];
+    protected $fillable = ['id', 'other_id', 'tax_number', 'full_name', 'email', 'login_at', 'logout_at'];
 
     protected $dates = ['login_at', 'logout_at'];
+
+    protected $datetimes = ['created_at', 'updated_at'];
 
     /**
      * Override save method

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LogController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('person_index'));
 });
+Route::match(['get'], '/person', [PersonController::class, 'index'])->name('person_index');
+Route::match(['get', 'post'], '/person/xml-upload', [PersonController::class, 'xml_upload'])->name('person_xml_upload');
+Route::match(['get'], '/log', [LogController::class, 'index'])->name('log_index');

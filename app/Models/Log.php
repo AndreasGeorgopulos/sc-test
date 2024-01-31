@@ -13,4 +13,6 @@ class Log extends Model
     protected $table = 'logs';
 
     protected $fillable = ['log_text'];
+
+    protected $datetimes = ['created_at', 'updated_at'];
 }
