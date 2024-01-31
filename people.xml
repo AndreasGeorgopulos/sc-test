@@ -1,0 +1,47 @@
+<people>
+    <person>
+        <ADOAZONOSITOJEL>7788991121</ADOAZONOSITOJEL>
+        <TELJESNEV>Ügyvezető Mihály</TELJESNEV>
+        <AZONOSITO>1</AZONOSITO>
+        <EGYEBID>1</EGYEBID>
+        <BELEPES>2015.09.08</BELEPES>
+        <KILEPES>2015.09.09</KILEPES>
+        <EMAILCIM>ugyvezeto.mihaly@gmail.com</EMAILCIM>
+    </person>
+    <person>
+        <ADOAZONOSITOJEL>5861495641</ADOAZONOSITOJEL>
+        <TELJESNEV>Vezérigazgató Péter</TELJESNEV>
+        <AZONOSITO>2</AZONOSITO>
+        <EGYEBID>1</EGYEBID>
+        <BELEPES>2015.10.08</BELEPES>
+        <KILEPES>2021.10.08</KILEPES>
+        <EMAILCIM>vezerigazgato.peter@gmail.com</EMAILCIM>
+    </person>
+    <person>
+        <ADOAZONOSITOJEL>8516479524</ADOAZONOSITOJEL>
+        <TELJESNEV>Osztályvezető Ibolya</TELJESNEV>
+        <AZONOSITO>3</AZONOSITO>
+        <EGYEBID>2</EGYEBID>
+        <BELEPES>2022.01.03</BELEPES>
+        <KILEPES>2023.08.19</KILEPES>
+        <EMAILCIM>osztalyvezeto.ibolya@gmail.com</EMAILCIM>
+    </person>
+    <person>
+        <ADOAZONOSITOJEL>8124679521</ADOAZONOSITOJEL>
+        <TELJESNEV>Csoportvezető Piroska</TELJESNEV>
+        <AZONOSITO>4</AZONOSITO>
+        <EGYEBID>2</EGYEBID>
+        <BELEPES>2019.04.01</BELEPES>
+        <KILEPES>2021.12.31</KILEPES>
+        <EMAILCIM>csoportvezeto.piroska@gmail.com</EMAILCIM>
+    </person>
+    <person>
+        <ADOAZONOSITOJEL>4562498545</ADOAZONOSITOJEL>
+        <TELJESNEV>Alkalmazott Pál</TELJESNEV>
+        <AZONOSITO>5</AZONOSITO>
+        <EGYEBID>2</EGYEBID>
+        <BELEPES>2015.10.08</BELEPES>
+        <KILEPES>2024.01.31</KILEPES>
+        <EMAILCIM>alkalmazott.pal@gmail.com</EMAILCIM>
+    </person>
+</people>
