@@ -30,7 +30,7 @@ RUN docker-php-ext-install zip
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install NPM
-#RUN apt upgrade -y
-#RUN apt install npm -y --fix-missing
+RUN apt upgrade -y
+RUN apt install npm -y --fix-missing
 
 RUN a2enmod rewrite
