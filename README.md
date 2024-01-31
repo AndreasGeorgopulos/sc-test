@@ -60,6 +60,8 @@ Adminer: http://localhost:2801 (host: sc-test-db, username: sc_user, password: s
 Futtasd az alábbi parancsokat.
 ```
 composer install
+cp .env.dev .env
+php artisan key:generate
 npm install
 php artisan migrate
 npm run build
