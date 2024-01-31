@@ -1,8 +1,12 @@
 @extends('index')
 @section('content')
-    <h1>{{ trans('Log-ok') }}</h1>
+    <h1 class="h1 mt-3 mb-3">{{ trans('Log-ok') }}</h1>
 
-    <a href="{{ route('person_index') }}">{{ trans('Vissza') }}</a>
+    <div class="text-center mt-3 mb-3">
+        <a href="{{ route('person_index') }}" class="btn btn-outline-secondary btn-sm">
+            <i class="fas fa-angle-left"></i> {{ trans('Vissza') }}
+        </a>
+    </div>
 
     <table class="table table-striped">
         <thead>

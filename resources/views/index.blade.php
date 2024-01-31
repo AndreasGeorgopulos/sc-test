@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ $site_title ?? 'SC Test' }}</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    @yield('content')
+    <div class="wrapper">
+        <div class="container">
+            @yield('content')
+        </div>
+    </div>
 </body>
 </html>

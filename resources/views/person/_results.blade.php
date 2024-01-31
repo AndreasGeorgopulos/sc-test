@@ -1,5 +1,5 @@
 @if($results = session('person_xml_processor_results'))
-    <table class="table table-striped">
+    <table class="table">
         <thead>
         <tr class="text-center">
             <th></th>
@@ -20,10 +20,11 @@
                 $success = $result['success'];
                 $model = $result['model'];
                 $errors = $result['errors'];
-                $iconClassName = $success ? 'fas fa-check text-success' : 'fas fa-ban text-danger';
+                $iconClassName = $success ? 'fas fa-check text-white' : 'fas fa-ban text-white';
+                $rowClass = $success ? 'bg-success' : 'bg-danger';
             @endphp
             <tr class="text-center">
-                <td>
+                <td class="{{ $rowClass }}">
                     <i class="{{ $iconClassName }}"></i>
                 </td>
                 <td>{{ $model->tax_number }}</td>
@@ -35,9 +36,9 @@
                 <td>{{ $model->email }}</td>
                 <td>
                     @if(!empty($errors))
-                        <ul>
+                        <ul class="list-group">
                             @foreach($errors as $error)
-                                <li class="">
+                                <li class="list-group-item">
                                     <sub>{{ implode(', ', $error) }}</sub>
                                 </li>
                             @endforeach

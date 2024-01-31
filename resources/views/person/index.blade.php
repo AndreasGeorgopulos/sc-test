@@ -1,9 +1,15 @@
 @extends('index')
 @section('content')
-    <h1>Személyek</h1>
+    <h1 class="h1 mt-3 mb-3">Személyek</h1>
 
-    <a href="{{ route('person_xml_upload') }}">{{ trans('Feltöltés') }}</a>
-    <a href="{{ route('log_index') }}">{{ trans('Log-ok') }}</a>
+    <div class="text-center mt-3 mb-3">
+        <a href="{{ route('person_xml_upload') }}" class="btn btn-outline-primary btn-sm me-3">
+            <i class="fa fa-upload"></i> {{ trans('Feltöltés xml file-ból') }}
+        </a>
+        <a href="{{ route('log_index') }}" class="btn btn-outline-secondary btn-sm">
+            <i class="fa fa-info-circle"></i> {{ trans('Log-ok megtekintés') }}
+        </a>
+    </div>
 
     <table class="table table-striped">
         <thead>
@@ -29,7 +35,7 @@
                 <td>{{ $model->login_at }}</td>
                 <td>{{ $model->logout_at }}</td>
                 <td>{{ $model->email }}</td>
-                <th>{{ $model->created_at->format('Y.m.d. H:i') }}</th>
+                <td>{{ $model->created_at->format('Y.m.d. H:i') }}</td>
             </tr>
         @endforeach
         </tbody>
