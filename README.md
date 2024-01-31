@@ -7,60 +7,62 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Php developer próbafeladat
+### A feladat
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A feladat megoldásához használj php7.4-t vagy nagyobbat, laravel keretrendszert és mysql adatbázist.
+Hozz létre egy git repót és megoldásonként commitolj.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Hozz létre egy xml-t.
+Az xml-ben a következő adatok szerepeljenek:
+- ADOAZONOSITOJEL: 778899112
+- TELJESNEV: Ügyvezető Mihály
+- AZONOSITO: 1
+- EGYEBID: 1
+- BELEPES: 2015.09.08
+- KILEPES: 2021.09.08
+- EMAILCIM: ugyvezeto.mihaly@gmail.com
+Az xml-ben legalább 5 különböző személy adatai legyenek feltüntetve.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. Készíts egy adatbázist, amely tárolni fogja az xmlből feldolgozott adatokat 'persons', illetve logokat 'logs'.
 
-## Learning Laravel
+3. Laravel keretrendszer alatt készíts egy rövid alkalmazást, ahol az elkészített xml feltölthető egy formon keresztűl.
+A formot ellenőrizd, hogy csakis xml dokumentumot lehessen feltölteni. ( A validálást megoldhatod frontend vagy backend oldalt )
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. A feldolgozás menetében figyelj, hogy az egyedi azonosítók egyediek is legyenek.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Minden egyes feldolgozott "person" adatról készíts log bejegyzést. Ezt tárold le az adatbázisban.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. A feldolgozás végeztével a feldolgozás eredményét add át egy felületnek ami megjeleníti, hogy egy egy személy sikeresen, sikertelenül rögzítésre került e.
 
-## Laravel Sponsors
+7. Hozz létre egy egy felületet, ahol nyomonkövethető a már létrejött person és log adatok.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+### Letöltés:
+```
+git clone https://github.com/AndreasGeorgopulos/sc-test.git sc-test
+cd sc-test
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Dockerizáció (opcionális):
+Lehetőség van Docker konténerben futtatni az alkalmazást. A beállítások a docker-compose.yml file-ban és a docker mappában találhatók.
+```
+docker-compose up -d --build
+docker exec -it sc-test-web sh
+```
 
-## Contributing
+Az alkalmazás elérése: http://localhost:2800
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Adminer: http://localhost:2801 (host: sc-test-db, username: sc_user, password: sc_pwd)
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Telepítés:
+Futtasd az alábbi parancsokat.
+```
+composer install
+npm install
+php artisan migrate
+npm run build
+```
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> A project gyökérkönyvtárában található people.xml-el lehet tesztelni
