@@ -44,18 +44,6 @@ git clone https://github.com/AndreasGeorgopulos/sc-test.git sc-test
 cd sc-test
 ```
 
-### Dockerizáció (opcionális):
-Lehetőség van Docker konténerben futtatni az alkalmazást. A beállítások a docker-compose.yml file-ban és a docker mappában találhatók.
-```
-docker-compose up -d --build
-docker exec -it sc-test-web sh
-```
-
-Az alkalmazás elérése: http://localhost:2800
-
-Adminer: http://localhost:2801 (host: sc-test-db, username: sc_user, password: sc_pwd)
-
-
 ### Telepítés:
 Futtasd az alábbi parancsokat.
 ```
